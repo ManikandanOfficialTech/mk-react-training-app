@@ -1,28 +1,13 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import {Clock} from './Clock';
-import './style.css';
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
+import App from './App';
 
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-        <Clock />
-      </div>
-    );
-  }
-}
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-render(<App />, document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
