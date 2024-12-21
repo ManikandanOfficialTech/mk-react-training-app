@@ -1,11 +1,14 @@
 import React from "react";
 import "./style.css";
+import Header from "./components/Header/Header";
+import Count from "./components/Count/Count";
 
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <h1>React training App!</h1>
+      <Header />
+      <Count />
     </div>
   );
 }
