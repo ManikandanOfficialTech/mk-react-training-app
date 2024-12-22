@@ -1,8 +1,10 @@
-import { applyMiddleware, createStore } from "redux";
-import thunk from "redux-thunk";
-import reducers from "./Reducers";
+import { applyMiddleware, createStore } from 'redux';
+import { thunk } from 'redux-thunk'; // Use named import for thunk
+import rootReducer from './Reducers';
 
-//thunk middleware is used to intercept actions so as to make API call before dispatching result to reducer
-const store = createStore(reducers, applyMiddleware(thunk));
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);
 
 export default store;

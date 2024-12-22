@@ -3,7 +3,7 @@ import { DECREAMENT, INCREAMENT } from '../../constants/CountConstants';
 
 const countInitialState = { count: 0 };
 
-export default CountReducer = (state = countInitialState, action) => {
+const CountReducer = (state = countInitialState, action) => {
     switch (action.type) {
         case INCREAMENT:
             return { ...state, count: state.count + 1 };
@@ -16,3 +16,5 @@ export default CountReducer = (state = countInitialState, action) => {
             break;
     }
 }
+
+export default CountReducer;
